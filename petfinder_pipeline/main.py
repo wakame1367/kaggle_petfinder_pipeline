@@ -11,9 +11,10 @@ from sklearn.decomposition import TruncatedSVD
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics import mean_squared_error
 from sklearn.model_selection import StratifiedKFold
+from petfinder_pipeline.utils import is_script_running
 
 # https://github.com/lopuhin/kaggle-imet-2019/blob/master/imet/utils.py#L17
-ON_KAGGLE: bool = 'KAGGLE_WORKING_DIR' in os.environ
+ON_KAGGLE: bool = is_script_running()
 DATA_ROOT = Path('../input/petfinder-adoption-prediction'
                  if ON_KAGGLE else '../resources/petfinder-adoption-prediction')
 
