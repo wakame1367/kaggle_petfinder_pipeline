@@ -12,8 +12,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: build submission codes
-          run: |
-            python ./build.py
+        run: |
+          python ./build.py
       - uses: harupy/push-kaggle-kernel@master
         env:
           # Do not leak your credentials.
