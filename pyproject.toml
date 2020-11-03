@@ -1,0 +1,19 @@
+[build-system]
+requires = ["poetry>=1.0.0",]
+build-backend = "poetry.masonry.api"
+
+[tool.poetry]
+version = "0.0.1"
+name = "kaggle_petfinder_pipeline"
+authors = [ "wakame <hotwater1367@gmail.com>",]
+description = ""
+readme = "README.md"
+license = "MIT"
+homepage = ""
+repository = "https://github.com/wakamezake/kaggle_petfinder_pipeline.git"
+
+[tool.poetry.dependencies]
+python = "^3.6.1"
+
+[tool.black]
+line-length = 79
