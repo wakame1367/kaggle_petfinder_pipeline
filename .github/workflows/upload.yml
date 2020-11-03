@@ -28,7 +28,9 @@ jobs:
           KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
           KAGGLE_KEY: ${{ secrets.KAGGLE_KEY }}
         with:
-          slug: petfinder_sample_2
+          # https://github.com/harupy/push-kaggle-kernel/commit/266039f1ade2701a789e2c9b1e6cc360659edeff
+          # {username}/{slug}
+          id: wakamezake/petfinder_sample_2
           title: petfinder_sample_2
           code_file: ./build/script.py
           language: python
