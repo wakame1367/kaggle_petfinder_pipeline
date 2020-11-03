@@ -1,0 +1,31 @@
+name: Upload
+
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  upload:
+    name: Upload
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: build submission codes
+          run: |
+            python ./build.py
+      - uses: harupy/push-kaggle-kernel@master
+        env:
+          # Do not leak your credentials.
+          KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
+          KAGGLE_KEY: ${{ secrets.KAGGLE_KEY }}
+        with:
+          slug: petfinder_sample_2
+          title: petfinder_sample_2
+          code_file: ./build/script.py
+          language: python
+          kernel_type: script
+          # Do not share high-scoring kernels.
+          is_private: false
+          competition_sources: |
+            petfinder-adoption-prediction
