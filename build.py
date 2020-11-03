@@ -11,7 +11,7 @@ def encode_file(path: Path) -> str:
 
 def build_script():
     to_encode = list(Path('petfinder_pipeline').glob('*.py')) + [Path('setup.py')]
-    file_data = {str(path): encode_file(path) for path in to_encode}
+    file_data = {str(path.as_posix()): encode_file(path) for path in to_encode}
     template = Path('script_template.py').read_text('utf8')
     Path('build/script.py').write_text(
         template.replace('{file_data}', str(file_data)),
