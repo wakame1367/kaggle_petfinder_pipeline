@@ -21,4 +21,4 @@ def run(command):
 
 
 run('python setup.py develop --install-dir /kaggle/working')
-run('python easy_gold/main.py')
+run('python petfinder_pipeline/main.py')
