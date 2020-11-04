@@ -30,7 +30,7 @@ jobs:
         with:
           # https://github.com/harupy/push-kaggle-kernel/commit/266039f1ade2701a789e2c9b1e6cc360659edeff
           # {username}/{slug}
-          id: wakamezake/petfinder_sample_2
+          id: wakamezake/petfinder-sample-2
           title: petfinder_sample_2
           code_file: ./build/script.py
           language: python
@@ -39,3 +39,5 @@ jobs:
           is_private: false
           competition_sources: |
             petfinder-adoption-prediction
+          kernel_sources: |
+            christofhenkel/extract-image-features-from-pretrained-nn
