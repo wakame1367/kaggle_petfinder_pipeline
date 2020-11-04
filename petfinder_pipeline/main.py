@@ -33,12 +33,12 @@ labels_breed = pd.read_csv(DATA_ROOT / 'breed_labels.csv')
 labels_state = pd.read_csv(DATA_ROOT / 'color_labels.csv')
 labels_color = pd.read_csv(DATA_ROOT / 'state_labels.csv')
 
-train_image_files = sorted(glob.glob(DATA_ROOT / 'train_images/*.jpg'))
-train_metadata_files = sorted(glob.glob(DATA_ROOT / 'train_metadata/*.json'))
-train_sentiment_files = sorted(glob.glob(DATA_ROOT / 'train_sentiment/*.json'))
-test_image_files = sorted(glob.glob(DATA_ROOT / 'test_images/*.jpg'))
-test_metadata_files = sorted(glob.glob(DATA_ROOT / 'test_metadata/*.json'))
-test_sentiment_files = sorted(glob.glob(DATA_ROOT / 'test_sentiment/*.json'))
+train_image_files = sorted(glob.glob(str(DATA_ROOT) + '/train_images/*.jpg'))
+train_metadata_files = sorted(glob.glob(str(DATA_ROOT) + '/train_metadata/*.json'))
+train_sentiment_files = sorted(glob.glob(str(DATA_ROOT) + '/train_sentiment/*.json'))
+test_image_files = sorted(glob.glob(str(DATA_ROOT) + '/test_images/*.jpg'))
+test_metadata_files = sorted(glob.glob(str(DATA_ROOT) + '/test_metadata/*.json'))
+test_sentiment_files = sorted(glob.glob(str(DATA_ROOT) + '/test_sentiment/*.json'))
 
 # extract datasets
 # https://www.kaggle.com/christofhenkel/extract-image-features-from-pretrained-nn
