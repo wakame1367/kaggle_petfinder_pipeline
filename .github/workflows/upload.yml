@@ -39,3 +39,5 @@ jobs:
           is_private: false
           competition_sources: |
             petfinder-adoption-prediction
+          kernel_sources: |
+            christofhenkel/extract-image-features-from-pretrained-nn
