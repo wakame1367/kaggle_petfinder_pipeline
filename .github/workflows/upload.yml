@@ -40,4 +40,4 @@ jobs:
           competition_sources: |
             petfinder-adoption-prediction
           kernel_sources: |
-            christofhenkel/extract-image-features-from-pretrained-nn
+            wakamezake/extract-image-features-from-pretrained-nn
